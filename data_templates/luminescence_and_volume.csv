@@ -1,0 +1,3 @@
+tumor_id,group,day,resistant_luminescence,sensitive_luminescence,volume
+mouse_01,initial_R_0.05pct,-17,100.0,100.0,1.0
+mouse_01,initial_R_0.05pct,0,120.0,140.0,4.0

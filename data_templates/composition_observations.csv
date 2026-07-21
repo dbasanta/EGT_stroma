@@ -1,0 +1,2 @@
+tumor_id,group,day,resistant,sensitive,fibroblast,treatment
+mouse_01,initial_R_0.05pct,0,0.000495,0.989505,0.01,true
