@@ -1,0 +1,197 @@
+{
+  "data_provenance": {
+    "composition_rows": 130,
+    "volume_rows": 90,
+    "source": "Digitized visible markers from embedded manuscript Figures 2 and 3",
+    "limitation": "Coincident raster markers cannot be separated; rows are visible unique points, not original replicate counts."
+  },
+  "reported_game_parameters": {
+    "alpha": 0.95,
+    "d": 0.15,
+    "c": 0.3,
+    "gamma": 0.1,
+    "k": 7.0
+  },
+  "reported_volume_parameters": {
+    "x_treatment": 0.7,
+    "y_treatment": 0.06,
+    "z_treatment": 0.05,
+    "x_no_treatment": 0.12,
+    "y_no_treatment": 0.14,
+    "z_no_treatment": 0.08,
+    "carrying_capacity": 5000.0
+  },
+  "composition_sse_sensitive_weighted": 2.4361171728937476,
+  "composition_sse_literal_printed_equation": 5.338218056480485,
+  "volume_sse_visible_points": 759057.83581873,
+  "treatment_comparison": [
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "continuous",
+      "relapse_day": 46,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 86,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "adaptive",
+      "relapse_day": 23,
+      "best_adaptive_window_percent": 10
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "continuous",
+      "relapse_day": 32,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 52,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "adaptive",
+      "relapse_day": 25,
+      "best_adaptive_window_percent": 10
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "continuous",
+      "relapse_day": 27,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 34,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "adaptive",
+      "relapse_day": 22,
+      "best_adaptive_window_percent": 12
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "continuous",
+      "relapse_day": 21,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 19,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": false,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "adaptive",
+      "relapse_day": 18,
+      "best_adaptive_window_percent": 1
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "continuous",
+      "relapse_day": 37,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 50,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.0,
+      "schedule": "adaptive",
+      "relapse_day": 23,
+      "best_adaptive_window_percent": 10
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "continuous",
+      "relapse_day": 32,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 42,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.01,
+      "schedule": "adaptive",
+      "relapse_day": 22,
+      "best_adaptive_window_percent": 10
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "continuous",
+      "relapse_day": 27,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 32,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.05,
+      "schedule": "adaptive",
+      "relapse_day": 20,
+      "best_adaptive_window_percent": 12
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "continuous",
+      "relapse_day": 21,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "intermittent_1_on_1_off",
+      "relapse_day": 18,
+      "best_adaptive_window_percent": ""
+    },
+    {
+      "emdr": true,
+      "initial_resistant_fraction": 0.2,
+      "schedule": "adaptive",
+      "relapse_day": 16,
+      "best_adaptive_window_percent": 1
+    }
+  ]
+}
