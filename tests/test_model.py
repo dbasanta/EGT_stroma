@@ -49,17 +49,17 @@ class ModelTests(unittest.TestCase):
                 fitness(State(0.2, 0.7, 4.0), on, params).resistant, 0.83
             )
 
-    def test_wound_signal_modes_differ_as_documented(self) -> None:
+    def test_unweighted_counterfactual_differs_as_documented(self) -> None:
         state = State(0.2, 0.3, 4.0)
-        literal = fitness(state, True, wound_signal="manuscript")
+        unweighted = fitness(state, True, wound_signal="unweighted")
         weighted = fitness(state, True, wound_signal="sensitive_weighted")
-        self.assertAlmostEqual(literal.fibroblast - weighted.fibroblast, 7.0 * 0.7)
+        self.assertAlmostEqual(unweighted.fibroblast - weighted.fibroblast, 7.0 * 0.7)
 
-    def test_zero_sensitive_exposes_manuscript_wound_signal_issue(self) -> None:
+    def test_zero_sensitive_exposes_unweighted_counterfactual_issue(self) -> None:
         state = State(0.5, 0.0, 4.0)
-        literal = fitness(state, True, wound_signal="manuscript")
+        unweighted = fitness(state, True, wound_signal="unweighted")
         weighted = fitness(state, True, wound_signal="sensitive_weighted")
-        self.assertGreater(literal.fibroblast, weighted.fibroblast)
+        self.assertGreater(unweighted.fibroblast, weighted.fibroblast)
 
     def test_one_step_matches_replicator_equation(self) -> None:
         state = State(0.1, 0.8, 4.0)
