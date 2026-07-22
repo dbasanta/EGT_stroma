@@ -115,7 +115,7 @@ def plot_calibrations(
     composition_rows: list[dict[str, str]], volume_rows: list[dict[str, str]], results: Path
 ) -> tuple[float, float, float]:
     predicted = composition_predictions(composition_rows, "sensitive_weighted")
-    literal = composition_predictions(composition_rows, "manuscript")
+    unweighted = composition_predictions(composition_rows, "unweighted")
     figure, axes = plt.subplots(2, 3, figsize=(15, 8))
     for axis, group in zip(axes.flat, GROUPS):
         trajectory = predicted[group]
@@ -190,7 +190,7 @@ def plot_calibrations(
     )
     return (
         composition_sse(composition_rows, predicted),
-        composition_sse(composition_rows, literal),
+        composition_sse(composition_rows, unweighted),
         volume_error,
     )
 
@@ -329,7 +329,7 @@ def main() -> None:
     results.mkdir(exist_ok=True)
     composition_rows = read_csv("digitized_composition.csv")
     volume_rows = read_csv("digitized_volume.csv")
-    weighted_sse, literal_sse, volume_error = plot_calibrations(
+    weighted_sse, unweighted_sse, volume_error = plot_calibrations(
         composition_rows, volume_rows, results
     )
     comparison = treatment_comparison(results)
@@ -344,7 +344,7 @@ def main() -> None:
         "reported_game_parameters": GameParameters().__dict__,
         "reported_volume_parameters": VolumeParameters().__dict__,
         "composition_sse_sensitive_weighted": weighted_sse,
-        "composition_sse_literal_printed_equation": literal_sse,
+        "composition_sse_unweighted_counterfactual": unweighted_sse,
         "volume_sse_visible_points": volume_error,
         "treatment_comparison": comparison,
     }
