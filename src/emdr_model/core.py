@@ -7,7 +7,7 @@ from typing import Literal, Protocol
 
 import numpy as np
 
-WoundSignal = Literal["manuscript", "sensitive_weighted"]
+WoundSignal = Literal["unweighted", "sensitive_weighted"]
 
 
 @dataclass(frozen=True)
@@ -108,7 +108,7 @@ def fitness(
     r, s, f = state.resistant, state.sensitive, state.fibroblast
     on = float(treatment)
 
-    if wound_signal == "manuscript":
+    if wound_signal == "unweighted":
         wound = game.k * on
     elif wound_signal == "sensitive_weighted":
         wound = s * game.k * on
