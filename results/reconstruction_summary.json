@@ -22,7 +22,7 @@
     "carrying_capacity": 5000.0
   },
   "composition_sse_sensitive_weighted": 2.4361171728937476,
-  "composition_sse_literal_printed_equation": 5.338218056480485,
+  "composition_sse_unweighted_counterfactual": 5.338218056480485,
   "volume_sse_visible_points": 759057.83581873,
   "treatment_comparison": [
     {
