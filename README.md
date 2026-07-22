@@ -16,13 +16,11 @@ The payoff equations, fitted parameter values, volume equations, and carrying
 capacity are transcribed from the manuscript. The following details were not
 specified and are therefore configurable assumptions:
 
-1. **Wound signal.** Equation (1.1) in the manuscript gives
-   `W_F = alpha*(r+s) + k*treatment`. This produces a wound signal even if no
-   sensitive cells exist. The prose instead implies
-   `W_F = alpha*(r+s) + s*k*treatment`. The payoff table and published relapse
-   times support the sensitive-weighted form, so it is the default. Both forms
-   remain available using `wound_signal="manuscript"` and
-   `wound_signal="sensitive_weighted"`.
+1. **Wound signal.** Equation (1.1) and the payoff table both give
+   `W_F = alpha*(r+s) + s*k*treatment`. This sensitive-weighted form is the
+   default and reproduces the published relapse times. A deliberately
+   unweighted counterfactual, `W_F = alpha*(r+s) + k*treatment`, remains
+   available as `wound_signal="unweighted"` for sensitivity checks.
 2. **Adaptive thresholds.** The precise original treatment window is absent.
    The implementation accepts explicit lower and upper volume thresholds and
    uses standard hysteresis: treatment turns on at the upper threshold and off

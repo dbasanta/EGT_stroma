@@ -21,32 +21,34 @@ Raster-overlapping markers cannot be separated; consequently, the files contain
 visible unique points rather than guaranteed original replicate counts. They
 must not be described as the original raw experimental dataset.
 
-## Equation correction supported by the results
+## Fibroblast-payoff verification
 
 The payoff table assigns the fibroblast payoff `alpha + k*f(t)` specifically to
-interactions with sensitive cells. Population averaging therefore gives
+interactions with sensitive cells. Equation (1.1) uses the same structure.
+Population averaging therefore gives
 
 ```text
 W_F = alpha*(r + s) + s*k*f(t)
 ```
 
-Equation (1.1) in the prose instead prints
+For comparison, a deliberately unweighted counterfactual is
 
 ```text
 W_F = alpha*(r + s) + k*f(t)
 ```
 
-which would give fibroblasts the full wound signal even when no sensitive cells
-exist. The sensitive-weighted form is supported by three independent checks:
+which gives fibroblasts the full wound signal even when no sensitive cells
+exist. The manuscript's sensitive-weighted form is supported by three checks:
 
 1. It follows algebraically from the payoff table.
-2. It fits the digitized composition points better than the literal printed
-   equation (SSE 2.436 versus 5.338 over the recovered visible points).
+2. It fits the digitized composition points better than the unweighted
+   counterfactual (SSE 2.436 versus 5.338 over the recovered visible points).
 3. It reproduces the published continuous and intermittent relapse times in
-   Figure 6. The literal printed equation does not.
+   Figure 6. The unweighted counterfactual does not.
 
-The code therefore uses the sensitive-weighted form by default and retains the
-literal form under `wound_signal="manuscript"` for audit comparisons.
+The code therefore uses the manuscript's sensitive-weighted form by default and
+retains the counterfactual under `wound_signal="unweighted"` for sensitivity
+comparisons.
 
 ## Treatment-schedule reconstruction
 
